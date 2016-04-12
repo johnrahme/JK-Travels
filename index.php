@@ -3,8 +3,6 @@
       include 'PHP/booking.php';
       storeBooking("1","3","5D");
       storeBooking("2","6","5F");
-
-      echo "New change!";
       
       $baseDir = "/public_html";
       //For server
