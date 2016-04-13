@@ -1,17 +1,4 @@
 <?php 
-session_start();
-$_SESSION["user"] = "john";
-
-$link = mysqli_connect("rerun.it.uts.edu.au","potiro","pcXZb(kL", "poti");
-
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-
-/*if(!$link)
-	die("Could not connect to Server");
-mysqli_select_db("poti", $link); */
 
 
 function printFlights(){

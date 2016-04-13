@@ -1,56 +1,25 @@
 <?php
-      include 'PHP/database.php';
-      include 'PHP/booking.php';
-      storeBooking("1","3","5D");
-      storeBooking("2","6","5F");
-      
-      $baseDir = "/public_html";
+      include 'PHP/setup.php';
+      setup("First page", "home", ""); 
+      include $rootPath.'PHP/db_connect.php';
+      include $rootPath.'PHP/database.php';
+      include $rootPath.'PHP/booking.php';
+      //$baseDir = "/public_html";
       //For server
       //$baseDir = "/~jorahme";
-      $existingBookings = $_SESSION["bookings"];
-      foreach($existingBookings as $booking){
-          echo $booking[2];
-      }
+     include $rootPath.'layout/header.php';
+
+      $allFlights = getFormResults();
     ?>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>JK Travels </title>
-
-    <!-- Bootstrap -->
-    <link href="<?php echo $baseDir; ?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!--
     
-    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-
-    -->
-      
-    <link href="<?php echo $baseDir; ?>/css/jquery-ui.css" rel="stylesheet">
-    <link href="<?php echo $baseDir; ?>/css/jquery-ui.theme.css" rel="stylesheet">
-    <link href="<?php echo $baseDir; ?>/css/jquery-ui.theme.structure.css" rel="stylesheet">
-                                                            
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body background = "<?php echo $baseDir; ?>/img/background.jpg">
-
+    
       <!-- Static navbar -->
     <?php
-      $active = "home";
-      include 'layout/navbar.php';
-      $allFlights = getFormResults();
+      include $rootPath.'layout/navbar.php';
      ?>
      <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
      <div class="jumbotron">
-        <h1>Welcome to JK travels, <?php echo $_SESSION["user"] ?>!</h1>
+        <h1>Welcome to JK travels!</h1>
         <p>Please click below to get going and book some flights!!</p>
         <p>
           <!--START SEARCH FORM-->
@@ -65,7 +34,7 @@
               <div class = "col-md-6">
                 <div class="form-group">
                     <label for="searchAutoCompleteTo">To:</label>
-                    <input id="searchAutoCompleteTo" class = "form-control" name="to">
+                    <input id="searchAutoCompleteTo" type = "text" class = "form-control" name="to">
                 </div>
               </div>
             </div>
@@ -100,12 +69,9 @@
       
 
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src = "http://code.jquery.com/ui/1.10.4/jquery-ui.js"> </script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo $baseDir; ?>/bootstrap/js/bootstrap.min.js"></script>
-
+    <?php 
+    include $rootPath."layout/footer.php";
+    ?>
     <script>
     (function ($) {
 
@@ -151,5 +117,5 @@
         });
         
     </script>
-  </body>
-</html>
+
+<?php include $rootPath."layout/endHtml.php" ?>
