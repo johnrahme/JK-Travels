@@ -59,7 +59,7 @@
             <div class = "row">
               <div class = "col-md-6">      
                 <div class="form-group">
-                    <input id="submitFlight" type = "submit" class = "btn btn-lg btn-primary disabled" value = "Continue" >
+                    <input id="submitFlight" type = "submit" class = "btn btn-lg btn-primary disabled" disabled value = "Continue" >
                 </div>
               </div>
           </div>
@@ -113,8 +113,13 @@
     <script>
         //Check if a radiobutton has been selected
         $("input[name='trip']").change(function(){
+            document.getElementById("submitFlight").disabled = false;
             $("#submitFlight").removeClass("disabled");
         });
+        if($("input[name='trip']").is(':checked')){
+            document.getElementById("submitFlight").disabled = false;
+            $("#submitFlight").removeClass("disabled");
+        }
         
     </script>
 

@@ -10,16 +10,9 @@
 ?>
 <!-- INSERT BODY HTML HERE-->
 
-
-<?php 
-    include $rootPath."layout/footer.php";
-?>
+<?php include $rootPath."layout/footer.php";?>
 
 <!-- INSERT SCRIPTS HERE HERE-->
 
 
-
-
-<?php
-    include $rootPath."layout/endHtml.php";
-?>
+<?php include $rootPath."layout/endHtml.php";?>
