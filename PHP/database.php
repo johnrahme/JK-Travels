@@ -90,7 +90,7 @@ function printResults($result){
                 $currentFlightId = $field;
             }
 		}
-		print "<td><input type='radio' name='trip' value='flightId".$currentFlightId."'></td></tr>";
+		print "<td><input type='radio' name='trip' value='$currentFlightId'></td></tr>";
 		 
 	}
 	print "</tbody>";

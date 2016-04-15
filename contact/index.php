@@ -10,6 +10,10 @@
 ?>
 <!-- INSERT BODY HTML HERE-->
 
+<div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
+
+
+</div>
 
 <?php 
     include $rootPath."layout/footer.php";

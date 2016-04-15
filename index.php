@@ -10,6 +10,7 @@
      include $rootPath.'layout/header.php';
 
       $allFlights = getFormResults();
+      $printFlights = isset($_GET["from"])&&isset($_GET["to"]);
     ?>
     
     
@@ -46,25 +47,32 @@
         </p>
       </div>
 
-
+        <?php
+         //Check if results should be printed
+         if($printFlights){
+        ?>
       <input id = "search" placeholder = "Filter..." class = "form-control" name = "search" type = "text">
       <br>
-     <div class = "table-responsive">
-      <?php
-        printResults($allFlights);
-      ?>
-     </div>
-      
-      <form method = "POST" action = "<?php echo $baseDir; ?>/configure">
-            <div class = "row">
-              <div class = "col-md-6">      
-                <div class="form-group">
-                    <input id="submitFlight" type = "submit" class = "btn btn-lg btn-primary disabled" disabled value = "Continue" >
+      <form action = "<?php echo $baseDir; ?>/details/" method = "post" >
+          <input type = "hidden" value="test" name="test">
+         <div class = "table-responsive">
+          <?php
+            printResults($allFlights);
+          ?>
+         </div>
+         <div class = "row" style= "margin: auto; max-width: 300px;">
+             <div class = "col-md-6">      
+                 <div class="form-group">
+                    <button id="submitFlight" type = "submit" class = "btn btn-lg btn-primary disabled" disabled>
+                    Make booking for selected flight
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true">
+                    </button>
                 </div>
               </div>
-          </div>
+         </div>
       </form>
       
+    <?php }?>
       <!-- Main component for a primary marketing message or call to action -->
       
 

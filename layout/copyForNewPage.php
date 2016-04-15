@@ -8,11 +8,13 @@
      include $rootPath.'layout/header.php';
      include $rootPath.'layout/navbar.php';
 ?>
-<!-- INSERT BODY HTML HERE-->
+<!-- INSERT BODY HTML HERE START-->
 
+
+<!-- INSERT BODY HTML HERE END-->
 <?php include $rootPath."layout/footer.php";?>
+<!-- INSERT SCRIPTS HERE HERE START-->
 
-<!-- INSERT SCRIPTS HERE HERE-->
 
-
+<!-- INSERT SCRIPTS HERE HERE END-->
 <?php include $rootPath."layout/endHtml.php";?>
