@@ -15,16 +15,27 @@
 ?>
 <!-- INSERT BODY HTML HERE START-->
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
+        
 
     <?php
     $result = mysqli_query($link, "select * FROM flights WHERE route_no = ".$_POST['trip']);
     $flightArray = mysqli_fetch_assoc($result);
     ?>
     <div class = "row">
-        <div class = col-md-12>
-            <h2>Choosing seats for flight from <?php echo $flightArray['from_city']; ?> to <?php echo $flightArray['to_city']; ?></h2>
-        </div>     
+   
+        <div class = col-xs-5 id="fromDiv">
+            <h2 id="fromLabel" ><?php echo $flightArray['from_city']; ?></h2>           
+        </div>
+        <div class = col-xs-2>
+            <h2 id="fromLabel" style = "text-align:center;" >To</h2>
+        </div>        
+        <div class = "col-xs-5" id="toDiv">
+            <h2 id="toLabel" style="text-align:right;"> <?php echo $flightArray['to_city']; ?></h2>        
+            
+        </div>
     </div>
+    <img id="book" src="<?php echo $baseDir; ?>/img/plane.png" alt="" width="100" height="70"
+  style="position: relative; left: 10px;">    
     
     <form method = "post" action = "<?php echo $baseDir; ?>/register/">
         <table class = "table table-striped table-bordered">
@@ -151,9 +162,9 @@
     
         
    
-    //value[0].attr("name", "newname");
 
 </script>
+  <script src="<?php echo $baseDir; ?>/js/animatePlane.js"></script>
 
 <!-- INSERT SCRIPTS HERE HERE END-->
 <?php include $rootPath."layout/endHtml.php";?>
