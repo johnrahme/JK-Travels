@@ -37,7 +37,7 @@
     <img id="book" src="<?php echo $baseDir; ?>/img/plane.png" alt="" width="100" height="70"
   style="position: relative; left: 10px;">    
     
-    <form method = "post" action = "<?php echo $baseDir; ?>/register/">
+    <form method = "post" action = "<?php echo $baseDir; ?>/PHP/storeBooking.php">
         <table class = "table table-striped table-bordered">
             <thead>
                 <tr>
@@ -48,6 +48,7 @@
                 </tr>
             </thead>
             <tbody>
+                <input type = "hidden" name="flightId" value = "<?php echo $flightArray['route_no'] ?>">
                 <tr id = "trSeat1">
                     <td>Seat 1 <input type = "checkbox" name = "seat1" id = "seat1"></td>
                     <td><input type = "checkbox" name = "child1"></td>
