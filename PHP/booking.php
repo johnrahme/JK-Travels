@@ -18,6 +18,7 @@ function addExampleBooking(){
       storeBooking("2",true,false,true);
 }
 function printBookings(){
+    global $baseDir;
     if(isset($_SESSION["bookings"])){
     $sum = 0;
     //Print the table if bookings is set
@@ -32,16 +33,16 @@ function printBookings(){
           //Get the current route
           $flight = getAssocFromQuery("select * FROM flights WHERE route_no = ".$booking[0]);
           print "<tr>";
-          print "<td>$booking[0]</td>";
+          echo "<td>From ".$flight['from_city']." to ".$flight["to_city"]."</td>";
           print "<td>";
           if($booking[1]){
-             echo "Child <br>";
+             echo "<i class='fa fa-child'></i> ";
           }
           if($booking[2]){
-              echo "Wheelchair <br>";
+              echo "<i class='fa fa-wheelchair'></i> "; 
           }        
           if($booking[3]){
-             echo "Special diet <br>"; 
+             echo "<i class='fa fa-cutlery'></i> ";
           } 
           print "</td>";
          echo '<td>'.$flight["price"]."</td";

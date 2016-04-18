@@ -19,6 +19,7 @@
     <link href="<?php echo $baseDir; ?>/css/jquery-ui.css" rel="stylesheet">
     <link href="<?php echo $baseDir; ?>/css/jquery-ui.theme.css" rel="stylesheet">
     <link href="<?php echo $baseDir; ?>/css/jquery-ui.theme.structure.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
                                                             
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
