@@ -10,17 +10,24 @@
 ?>
 <!-- INSERT BODY HTML HERE START-->
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
-
+    
+    <div class = "bookingContainer" id = "bookCont">
     <?php
     printBookings();
-    //removeBookings();
     ?>
+    </div>
+    
+    <form id = "removeBooking" action = "<?php echo $baseDir;?>/PHP/storeBooking.php" method = "post">
+        <input type = "hidden" name ="delete" value="true">    
+    </form>
+    <a href = "<?php echo $baseDir;?>"><button class = "btn btn-primary">Book more flights</button></a>
+    <button class = "btn btn-success">Checkout!</button>
+    <button class = "btn btn-danger" type = "submit" form="removeBooking">Remove all flights</button>
 </div>
 
 <!-- INSERT BODY HTML HERE END-->
 <?php include $rootPath."layout/footer.php";?>
 <!-- INSERT SCRIPTS HERE HERE START-->
-
 
 <!-- INSERT SCRIPTS HERE HERE END-->
 <?php include $rootPath."layout/endHtml.php";?>

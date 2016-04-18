@@ -75,10 +75,15 @@ function getFormResults(){
 		return $result;
 	}
 }
+function getAssocFromQuery($query){
+    global $link;
+    $result = mysqli_query($link,$query);
+    return mysqli_fetch_assoc($result);
+}
 function printResults($result){
 	print "<table class='table table-striped table-bordered'>";
 	print "<thead>";
-		print "<tr><th>ID</th><th>From</th><th>To</th><th>Cost</th><th>Select</th></tr>";
+    print "<tr><th>ID</th><th>From</th><th>To</th><th>Cost</th><th>Select</th></tr>";
 	print "</thead>";
 	print "<tbody>";
     $currentFlightId = 0;
