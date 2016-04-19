@@ -21,7 +21,7 @@
         <input type = "hidden" name ="delete" value="true">    
     </form>
     <a href = "<?php echo $baseDir;?>"><button class = "btn btn-primary">Book more flights</button></a>
-    <button class = "btn btn-success">Checkout!</button>
+    <a href = "<?php echo $baseDir;?>/checkout/"><button class = "btn btn-success">Checkout!</button></a>
     <button class = "btn btn-danger" type = "submit" form="removeBooking">Remove all flights</button>
 </div>
 
