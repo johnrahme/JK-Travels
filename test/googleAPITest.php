@@ -58,7 +58,7 @@
       </p>
       <div id="map_canvas" style="width: 600px; height: 400px"></div>
     </form>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaWHp2US2LZkwkZJ4z3HUSHnQouoYS2WA&callback=initialize"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaWHp2US2LZkwkZJ4z3HUSHnQouoYS2WA&callback=initialize"
     async defer></script>
   </body>
 </html>
