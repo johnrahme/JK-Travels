@@ -11,10 +11,6 @@
 ?>
 <!-- INSERT BODY HTML HERE START-->
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
-    <?php
-    //addExampleUser();
-    printUser();
-    ?>
     <!-- These fields needs to be added! -->
     <!--Given Name, Family Name, Address Line 1, Address Line 2, Suburb, State, Postcode Country, email address, mobile phone, business phone and work phone -->
     <style>
@@ -64,9 +60,10 @@ function show(step){
             $("#step2").hide();
             break;
         case "step2":
-            storeUser();
+            
             $("#step1").hide();
             $("#step2").show();
+            storeUser();
     }
 }
 </script>
