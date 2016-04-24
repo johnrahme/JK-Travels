@@ -9,7 +9,7 @@
        }
       include $rootPath.'PHP/db_connect.php';
       include $rootPath.'PHP/database.php';
-      include $rootPath.'PHP/booking.php';
+      include $rootPath.'PHP/booking/booking.php';
       include $rootPath.'layout/header.php';
       include $rootPath.'layout/navbar.php';
 ?>
@@ -37,7 +37,7 @@
     <img id="book" src="<?php echo $baseDir; ?>/img/plane.png" alt="" width="100" height="70"
   style="position: relative; left: 10px;">    
     
-    <form method = "post" action = "<?php echo $baseDir; ?>/PHP/storeBooking.php">
+    <form method = "post" action = "<?php echo $baseDir; ?>/PHP/booking/storeBooking.php">
         <table class = "table table-striped table-bordered">
             <thead>
                 <tr>

@@ -4,7 +4,7 @@
       setup("Contact", "contact","../"); 
       include $rootPath.'PHP/db_connect.php';
       include $rootPath.'PHP/database.php';
-      include $rootPath.'PHP/booking.php';
+      include $rootPath.'PHP/booking/booking.php';
      include $rootPath.'layout/header.php';
      include $rootPath.'layout/navbar.php';
 ?>
@@ -17,7 +17,7 @@
     ?>
     </div>
     
-    <form id = "removeBooking" action = "<?php echo $baseDir;?>/PHP/storeBooking.php" method = "post">
+    <form id = "removeBooking" action = "<?php echo $baseDir;?>/PHP/booking/storeBooking.php" method = "post">
         <input type = "hidden" name ="delete" value="true">    
     </form>
     <a href = "<?php echo $baseDir;?>"><button class = "btn btn-primary">Book more flights</button></a>

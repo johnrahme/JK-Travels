@@ -3,7 +3,7 @@
       setup("First page", "home", ""); 
       include $rootPath.'PHP/db_connect.php';
       include $rootPath.'PHP/database.php';
-      include $rootPath.'PHP/booking.php';
+      include $rootPath.'PHP/booking/booking.php';
       //$baseDir = "/public_html";
       //For server
       //$baseDir = "/~jorahme";

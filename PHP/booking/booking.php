@@ -17,6 +17,21 @@ function addExampleBooking(){
       storeBooking("1",true,true,false);
       storeBooking("2",true,false,true);
 }
+function getBookingsString(){
+    $string = "";
+    $existingBookings = $_SESSION["bookings"];
+      foreach($existingBookings as $booking){
+          //Get the current route
+          $flight = getAssocFromQuery("select * FROM flights WHERE route_no = ".$booking[0]);
+          
+          $string = $string.$flight["from_city"]." to ".$flight["to_city"]."<br>";
+          $string = $string."Price: ".$flight["price"]."<br>";
+          $string = $string."Is child?: ".$booking[1];
+          $string = $string."<br><br>";
+          
+      }
+    return $string;
+}
 function printBookings(){
     global $baseDir;
     if(isset($_SESSION["bookings"])){

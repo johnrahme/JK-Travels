@@ -4,10 +4,10 @@
       setup("Checkout", "home","../"); 
       include $rootPath.'PHP/db_connect.php';
       include $rootPath.'PHP/database.php';
-      include $rootPath.'PHP/booking.php';
+      include $rootPath.'PHP/booking/booking.php';
      include $rootPath.'layout/header.php';
      include $rootPath.'layout/navbar.php';
-     include $rootPath.'PHP/user.php';
+     include $rootPath.'PHP/user/user.php';
 ?>
 <!-- INSERT BODY HTML HERE START-->
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
@@ -23,6 +23,9 @@
     <div id = "step2" hidden>
         <?php include  $rootPath."layout/step2form.php";?>
     </div>
+    <div id = "step3" hidden>
+        <?php include  $rootPath."layout/step3.php";?>
+    </div
 </div>
 
 <!-- INSERT BODY HTML HERE END-->
@@ -58,18 +61,34 @@ function show(step){
         case "step1":
             $("#step1").show();
             $("#step2").hide();
+            $("#step3").hide();
             break;
         case "step2":
             
             $("#step1").hide();
             $("#step2").show();
+            $("#step3").hide();
             storeUser();
+            break;
+        case "step2nr2":
+            
+            $("#step1").hide();
+            $("#step2").show();
+            $("#step3").hide();
+            break;
+        case "step3":
+            $("#step1").hide();
+            $("#step2").hide();
+            $("#step3").show();
+            storePayment();
+            break;
     }
 }
 </script>
 
 
  <script src="<?php echo $baseDir; ?>/js/ajax.js"></script>
- <script src="<?php echo $baseDir; ?>/js/storeUser.js"></script>
+ <script src="<?php echo $baseDir; ?>/js/user/storeUser.js"></script>
+ <script src="<?php echo $baseDir; ?>/js/payment/storePayment.js"></script>
 <!-- INSERT SCRIPTS HERE HERE END-->
 <?php include $rootPath."layout/endHtml.php";?>

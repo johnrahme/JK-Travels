@@ -25,6 +25,6 @@ if(!empty($_POST["seat5"])){
     storeBooking($_POST["flightId"], !empty($_POST["child5"]), !empty($_POST["wheel5"]), !empty($_POST["diet5"]));
 
 }
-header("Location:../bookings/"); /* Redirect browser */
+header("Location:../../bookings/"); /* Redirect browser */
 exit();
 ?>

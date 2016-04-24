@@ -4,7 +4,7 @@
       setup("Contact", "contact","../"); 
       include $rootPath.'PHP/db_connect.php';
       include $rootPath.'PHP/database.php';
-      include $rootPath.'PHP/booking.php';
+      include $rootPath.'PHP/booking/booking.php';
      include $rootPath.'layout/header.php';
      include $rootPath.'layout/navbar.php';
 ?>
