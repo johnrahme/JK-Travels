@@ -5,11 +5,14 @@
       include $rootPath.'PHP/db_connect.php';
       include $rootPath.'PHP/database.php';
       include $rootPath.'PHP/booking/booking.php';
+      include $rootPath.'PHP/mailHelper.php';
 
 $to = "john.rahme.se@gmail.com";
-$subject = "Booking Confirmation";
+$subject = "Booking Confirmation JK travels";
 $user = $_SESSION["user"];
 $booking = $_SESSION["bookings"];
+
+$messageString = printMail($user);
 
 $message = "
 <h1>
@@ -25,9 +28,11 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // More headers
-$headers .= 'From: <NO-REPLY@jrstravels.uts.edu.au>' . "\r\n";
+$headers .= 'From: <NO-REPLY-JKT@jktravels.uts.edu.au>' . "\r\n";
+//Uncommented to not get spammed...
 
-mail($to,$subject,$message,$headers);
+
+mail($to,$subject,$messageString,$headers);
 
 
 header("Location:../checkout/confirmation.php"); /* Redirect browser */
