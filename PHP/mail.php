@@ -7,14 +7,17 @@
       include $rootPath.'PHP/booking/booking.php';
       include $rootPath.'PHP/mailHelper.php';
 
-$to = "john.rahme.se@gmail.com";
-$subject = "Booking Confirmation JK travels";
+
 $user = $_SESSION["user"];
-$booking = $_SESSION["bookings"];
+
+
+$to = "john.rahme.se@gmail.com"; //Remove this when publishing
+//$to = $user[8]; // And add this
+$subject = "Booking Confirmation JK travels";
 
 $messageString = printMail($user);
 
-$message = "
+$oldMessage = "
 <h1>
 Hi ".$user[0]." ".$user[1].
 "!</h1>
