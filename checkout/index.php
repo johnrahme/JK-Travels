@@ -64,7 +64,9 @@ function show(step){
             $("#step3").hide();
             break;
         case "step2":
-            
+            if(!validateStep1()){
+                break;
+            }
             $("#step1").hide();
             $("#step2").show();
             $("#step3").hide();
@@ -77,6 +79,9 @@ function show(step){
             $("#step3").hide();
             break;
         case "step3":
+            if(!validateStep2()){
+                break;
+            }
             $("#step1").hide();
             $("#step2").hide();
             $("#step3").show();
@@ -89,6 +94,7 @@ function show(step){
 
  <script src="<?php echo $baseDir; ?>/js/ajax.js"></script>
  <script src="<?php echo $baseDir; ?>/js/user/storeUser.js"></script>
+<script src="<?php echo $baseDir; ?>/js/validation.js"></script>
  <script src="<?php echo $baseDir; ?>/js/payment/storePayment.js"></script>
 <!-- INSERT SCRIPTS HERE HERE END-->
 <?php include $rootPath."layout/endHtml.php";?>

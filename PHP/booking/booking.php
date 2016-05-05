@@ -39,12 +39,12 @@ function printBookings(){
     //Print the table if bookings is set
     print "<table class='table table-striped table-bordered'>";
 	print "<thead>";
-    print "<tr><th>Route</th><th>Specifications</th><th>Cost</th></tr>";
+    print "<tr><th>Route</th><th>Specifications</th><th>Cost</th><th>Delete</th></tr>";
 	print "</thead>";
 	print "<tbody>";    
     
     $existingBookings = $_SESSION["bookings"];
-      foreach($existingBookings as $booking){
+      foreach($existingBookings as $key => $booking){
           //Get the current route
           $flight = getAssocFromQuery("select * FROM flights WHERE route_no = ".$booking[0]);
           print "<tr>";
@@ -60,7 +60,8 @@ function printBookings(){
              echo "<i class='fa fa-cutlery'></i> ";
           } 
           print "</td>";
-         echo '<td>'.$flight["price"]."</td";
+         echo '<td>'.$flight["price"]."</td>";
+         echo '<td><input type = "checkbox" value = "'.$key.'" name = "bookings[]" id = "flight'.$key.'"></td>';
          print "</tr>"; 
           $sum +=$flight["price"];
       } 
@@ -72,11 +73,11 @@ function printBookings(){
     }
     
     else{
-        echo "You got no bookings!";
+        echo "You have no bookings!";
     }
 }
-function removeBookings(){
-    session_unset();
+function removeBooking($id){
+    unset($_SESSION["bookings"][$id]);
 }
 
 ?>

@@ -11,18 +11,16 @@
 <!-- INSERT BODY HTML HERE START-->
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
     
-    <div class = "bookingContainer" id = "bookCont">
-    <?php
-    printBookings();
-    ?>
-    </div>
-    
-    <form id = "removeBooking" action = "<?php echo $baseDir;?>/PHP/booking/storeBooking.php" method = "post">
-        <input type = "hidden" name ="delete" value="true">    
+    <form id = "removeBooking" action = "<?php echo $baseDir;?>/PHP/booking/deleteBooking.php" method = "post">
+        <div class = "bookingContainer" id = "bookCont">
+        <?php
+        printBookings();
+        ?>
+        </div>       
     </form>
     <a href = "<?php echo $baseDir;?>"><button class = "btn btn-primary">Book more flights</button></a>
     <a href = "<?php echo $baseDir;?>/checkout/"><button class = "btn btn-success">Proceed to checkout</button></a>
-    <button class = "btn btn-danger" type = "submit" form="removeBooking">Clear all booked flights</button>
+    <button class = "btn btn-danger" type = "submit" form="removeBooking">Clear selected flights</button>
 </div>
 
 <!-- INSERT BODY HTML HERE END-->
