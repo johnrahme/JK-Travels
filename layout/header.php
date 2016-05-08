@@ -20,6 +20,7 @@
     <link href="<?php echo $baseDir; ?>/css/jquery-ui.theme.css" rel="stylesheet">
     <link href="<?php echo $baseDir; ?>/css/jquery-ui.theme.structure.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="<?php echo $baseDir; ?>/css/validation.css" rel="stylesheet">
                                                             
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,3 +31,4 @@
     <![endif]-->
   </head>
   <body background = "<?php echo $baseDir; ?>/img/background.jpg">
+  <?php include $rootPath.'layout/contactModal.php'; ?>

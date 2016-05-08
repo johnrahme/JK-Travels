@@ -13,10 +13,6 @@
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
     <!-- These fields needs to be added! -->
     <!--Given Name, Family Name, Address Line 1, Address Line 2, Suburb, State, Postcode Country, email address, mobile phone, business phone and work phone -->
-    <style>
-        .required::after{color: #e32;
-    content: ' *';};
-    </style>
     <div id = "step1">
         <?php include  $rootPath."layout/step1form.php";?>
     </div>

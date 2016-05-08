@@ -1,18 +1,19 @@
 //Remove error or success from step 1
-$('#step1Form :input').each(function(){
+/*$('#step1Form :input').each(function(){
        $(this).keypress(function(){
             $(this).parent("div").removeClass("has-error");
             $(this).parent("div").removeClass("has-success");
             $(this).parent("div").removeClass("has-feedback"); 
        });
     });
-
+*/
 //Remove error or success
-$('#step2Form :input').each(function(){
+$(':input').each(function(){
        $(this).keypress(function(){
-            $(this).parent("div").removeClass("has-error");
-            $(this).parent("div").removeClass("has-success");
-            $(this).parent("div").removeClass("has-feedback"); 
+            $(this).parents("div").removeClass("has-error");
+            $(this).parents("div").removeClass("has-success");
+            $(this).parents("div").removeClass("has-feedback");
+           
        });
 });
 
@@ -54,5 +55,23 @@ function validateStep2(){
        }
     });
     
+    return passed;
+}
+function validateContact(){
+    passed = true;
+     $('#contactForm div.form-group').each(function(){
+        var required = false;
+       if($(this).children("label").hasClass("required")){
+           required = true;
+       }
+       if(required&&!$(this).children().children(':input').val()){
+           $(this).addClass("has-error has-feedback");
+           passed = false;
+           
+       }
+       else if (required){
+          $(this).addClass("has-success has-feedback");
+       }
+    });
     return passed;
 }

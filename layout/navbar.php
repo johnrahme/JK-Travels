@@ -16,7 +16,8 @@
             <ul class="nav navbar-nav">
               <li <?php if($active == "home"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>">Home</a></li>
               <li <?php if($active == "about"){?>class="active"<?php } ?> ><a href="#">About</a></li>
-              <li <?php if($active == "contact"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>/contact">Contact</a></li>
+              <li <?php if($active == "contact"){?>class="active"<?php } ?> ><a href="#" data-toggle="modal" data-target="#myModal">Contact</a>
+                <!-- Button trigger modal --></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deals <span class="caret"></span></a>
                 <ul class="dropdown-menu">
