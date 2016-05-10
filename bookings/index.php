@@ -1,7 +1,7 @@
 <?php
       include "../PHP/setup.php";
       //Setup title, active and number of subfolders
-      setup("Contact", "contact","../"); 
+      setup("Contact", "bookings","../"); 
       include $rootPath.'PHP/db_connect.php';
       include $rootPath.'PHP/database.php';
       include $rootPath.'PHP/booking/booking.php';
@@ -18,7 +18,7 @@
         ?>
         </div>       
     </form>
-    <a href = "<?php echo $baseDir;?>"><button class = "btn btn-primary">Book more flights</button></a>
+    <a href = "<?php echo $baseDir;?>/search"><button class = "btn btn-primary">Book more flights</button></a>
     <a href = "<?php echo $baseDir;?>/checkout/"><button class = "btn btn-success">Proceed to checkout</button></a>
     <button class = "btn btn-danger" type = "submit" form="removeBooking">Clear selected flights</button>
 </div>

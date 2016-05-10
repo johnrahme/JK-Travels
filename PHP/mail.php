@@ -11,8 +11,8 @@
 $user = $_SESSION["user"];
 
 
-$to = "john.rahme.se@gmail.com"; //Remove this when publishing
-//$to = $user[8]; // And add this
+//$to = "john.rahme.se@gmail.com"; //Remove this when publishing
+$to = $user[8]; // And add this
 $subject = "Booking Confirmation JK travels";
 
 $messageString = printMail($user);

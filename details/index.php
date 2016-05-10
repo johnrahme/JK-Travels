@@ -1,7 +1,7 @@
 <?php
       include "../PHP/setup.php";
       //Setup title, active and number of subfolders
-      setup("Contact", "contact","../"); 
+      setup("Contact", "search","../"); 
 
         if(!isset($_POST['trip'])){
         header("Location:".$baseDir); /* Redirect browser */

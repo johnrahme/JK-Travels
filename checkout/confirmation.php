@@ -1,7 +1,7 @@
 <?php
       include "../PHP/setup.php";
       //Setup title, active and number of subfolders
-      setup("Contact", "contact","../"); 
+      setup("Contact", "bookings","../"); 
       include $rootPath.'PHP/db_connect.php';
       include $rootPath.'PHP/database.php';
       include $rootPath.'PHP/booking/booking.php';

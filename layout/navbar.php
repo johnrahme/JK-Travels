@@ -15,25 +15,10 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li <?php if($active == "home"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>">Home</a></li>
-              <li <?php if($active == "about"){?>class="active"<?php } ?> ><a href="#">About</a></li>
+              <li <?php if($active == "search"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>/search">Search</a></li>
+                <li <?php if($active == "bookings"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>/bookings">Bookings</a></li>
               <li <?php if($active == "contact"){?>class="active"<?php } ?> ><a href="#" data-toggle="modal" data-target="#myModal">Contact</a>
                 <!-- Button trigger modal --></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deals <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./">Login <span class="sr-only">(current)</span></a></li>
-              <li><a href="../navbar-static-top/">Logout</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
