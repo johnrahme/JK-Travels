@@ -29,24 +29,43 @@
                 </select>
             </div>
             <div class = "form-group">
-                <label for="number" id = "number" class = "required control-label">Card number: </label>
+                <label for="number" id = "numberL" class = "required control-label">Card number: </label>
                 <input type = "text" class = "form-control" name = "number" id = "number">
             </div>
             <div class = "form-group">
-                <label for="name" id = "name" class = "required control-label">Name on card: </label>
+                <label for="name" id = "nameL" class = "required control-label">Name on card: </label>
                 <input type = "text" class = "form-control" name = "name" id = "name">
             </div>
             <div class = "form-group">
-                <label for="expMonth" id = "expMonthL" class = "required control-label">Exp month: </label>
-                <input type = "text" class = "form-control" name = "expMonth" id = "expMonth">
+                <label for="expMonth" id = "expMonthL" class = "required control-label">Exp month: </label>                
+                <select name = "expMonth" id = "expMonth" title="select a month" class = "form-control">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                </select>
             </div>
             <div class = "form-group">
                 <label for="expYear" id = "expYearL" class = "required control-label">Exp year: </label>
-                <input type = "text" class = "form-control" name = "expYear" id = "expYear">
+                <select name = "expYear" id = "expYear" title="select a year" class = "form-control">
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>  
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                </select>
             </div>
             <div class = "form-group">
                 <label for="secCode" id = "secCodeL" class = "required control-label">Security code: </label>
-                <input type = "text" class = "form-control" name = "secCode" id = "secCode">
+                <input type = "tel" class = "form-control" name = "secCode" id = "secCode">
             </div>
     
     

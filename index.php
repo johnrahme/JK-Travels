@@ -19,6 +19,13 @@
       include $rootPath.'layout/navbar.php';
      ?>
      <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
+         <?php if(isset($_SESSION["message"])) {
+        echo $_SESSION["message"];
+        unset($_SESSION["message"]);
+        }
+         
+         
+         ?>
      <div class="jumbotron">
         <h1>Welcome to JK travels!</h1>
         <p>Please click below to get going and book some flights!!</p>

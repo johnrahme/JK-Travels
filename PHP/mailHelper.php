@@ -60,6 +60,7 @@ function printTable(){
     return $string;
 }
 function printMail($user){
+    $users = $_SESSION["user"];
     $returnString = "
 
 <html xmlns='http://www.w3.org/1999/xhtml' style=\"margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;\" >

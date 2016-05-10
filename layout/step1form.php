@@ -53,7 +53,7 @@
             </div>
             <div class = "form-group">
                 <label for="email" id = "emailL" class = "required control-label">Email address: </label>
-                <input type = "text" class = "form-control" name = "email" id = "email">
+                <input type = "email" class = "form-control" name = "email" id = "email">
             </div>
             <div class = "form-group">
                 <label class = "control-label" for="mobileP" id = "mobilePL">Mobile phone: </label>
