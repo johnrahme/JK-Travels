@@ -16,6 +16,15 @@ $('input').each(function(){
            
        });
 });
+//Remove for textarea
+$('textarea').each(function(){
+       $(this).keypress(function(){
+            $(this).parents("div").removeClass("has-error");
+            $(this).parents("div").removeClass("has-success");
+            $(this).parents("div").removeClass("has-feedback");
+           
+       });
+});
 
 function validateStep1(){
     var passed = true;
@@ -153,11 +162,13 @@ function validateContact(){
            required = true;
        }
        if(required&&!$(this).children().children(':input').val()){
+           $(this).removeClass("has-success ");
            $(this).addClass("has-error has-feedback");
            passed = false;
            
        }
        else if (required){
+           $(this).removeClass("has-error");
           $(this).addClass("has-success has-feedback");
        }
     });

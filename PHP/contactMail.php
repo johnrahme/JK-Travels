@@ -2,7 +2,7 @@
 session_start();
 $_SESSION["message"] = "Email has been sent to us, we will contact you shortly";
 $to = "john_rahme92@hotmail.com";
-$subject = "Enquiry from ".$_POST["contact-name"];
+$subject = $_POST["contact-subject"];
 $messageString = 
     
 "<html> <head></head> <body>".
