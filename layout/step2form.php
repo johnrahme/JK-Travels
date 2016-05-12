@@ -1,7 +1,6 @@
 <h2>Complete booking - stage 2 of 4 - Payment details</h2>
 
-<p id = "firstNameP">First Name</p>
-<p id = "lastNameP">Last Name</p>
+
 
 <div class="progress">
       <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
@@ -9,8 +8,10 @@
       </div>
 </div>
 
-
-<form id = "step2Form">
+<div class = "row">
+    <div class = "col-md-6">
+    <!-- Step 2 form-->
+    <form id = "step2Form">
             <div class = "form-group">
                 <label for="cardType" id = "cardTypeL" class = "required control-label" >Payment type: </label>
                 <select class = "form-control" name = "cardType" id = "cardType">
@@ -69,7 +70,19 @@
             </div>
     
     
-</form>
+        </form>
+    </div>
+    <div class = "col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-body" style="padding-top: 0">
+                <div class="page-header" style="margin-top:7px; margin-bottom: 7px">
+                <h4 class="text-center">Contact information </h4>
+                </div>
+                <div id = "firstNameP">Loading contact information...</div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <button class = "btn btn-primary" id = "toStep1" onclick="show('step1')">Stage 1 - Personal details</button>
 

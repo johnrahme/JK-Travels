@@ -81,6 +81,7 @@ function show(step){
             $("#step1").hide();
             $("#step2").hide();
             $("#step3").show();
+            //Store payment and get all bookings
             storePayment();
             break;
     }
@@ -90,6 +91,7 @@ function show(step){
 
  <script src="<?php echo $baseDir; ?>/js/ajax.js"></script>
  <script src="<?php echo $baseDir; ?>/js/user/storeUser.js"></script>
+<script src="<?php echo $baseDir; ?>/js/booking/getBooking.js"></script>
 <script src="<?php echo $baseDir; ?>/js/validation.js"></script>
  <script src="<?php echo $baseDir; ?>/js/payment/storePayment.js"></script>
 <!-- INSERT SCRIPTS HERE HERE END-->

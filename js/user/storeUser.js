@@ -27,18 +27,13 @@ function storeUser(){
 }
 function handle_return1(){
     if((ajax.readyState == 4)&&(ajax.status == 200)){
-        var users = JSON.parse(ajax.responseText); 
         getUser();
     }
 }
 function handle_return_get_user(){
     if((ajax.readyState == 4)&&(ajax.status == 200)){
-        var user = JSON.parse(ajax.responseText);
-        $("#firstNameP").html("");
-        $("#details").html("");
-        for(i = 0; i<user.length; i++){
-             $("#firstNameP").append(user[i]+",");
-             $("#details").append(user[i]+",");
-        }
+        var user = ajax.responseText;
+        $("#firstNameP").html(user);
+        $("#details").html(user);
     }
 }

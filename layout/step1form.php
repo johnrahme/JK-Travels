@@ -4,9 +4,10 @@
           <p style = "color:white">25%</p>
       </div>
 </div>
-
-<form id = "step1Form">
-            <div class = "form-group">
+<div class = "row">
+    <form id = "step1Form">
+    <div class = "col-md-6">
+        <div class = "form-group">
                 <label for="firstName" id = "firstNameL" class = "required control-label">Given name:</label>
                 <input type = "text" class = "form-control" name = "firstName" id ="firstName">
             </div>
@@ -31,7 +32,9 @@
                 <a href="#" id="position" class="popups" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="State is optional when booking from outside Australia" data-original-title="State"><span class="glyphicon glyphicon-question-sign" style="font-size: 1.0em"></span></a>
                 <input type = "text" class = "form-control" name = "state" id = "state">
             </div>
-            <div class = "form-group">
+    </div>
+    <div class = "col-md-6">
+        <div class = "form-group">
                 <label for="country" id = "countryL" class = "required control-label" >Country: </label>
                 <select class = "form-control" name = "country" id = "country">
                     <option value = "australia">
@@ -67,7 +70,9 @@
                 <label class = "control-label" for="workP">Work phone: </label>
                 <input type = "text" class = "form-control" name = "workP" id = "workP">
             </div>
-</form>
+    </div>
+ </form>
+</div>
 
 <button class = "btn btn-primary" id = "toBookings" onclick="show('bookings')">Bookings</button>
 

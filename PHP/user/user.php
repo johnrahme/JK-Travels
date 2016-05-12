@@ -18,6 +18,21 @@ function printUser(){
         echo "No user registered!";
     }
 }
+function printUserTable(){
+    $returnString = "";
+    if(isset($_SESSION["user"])){
+    
+     foreach($_SESSION["user"] as $key => $attribute){
+         $returnString = $returnString."$attribute <br>";
+     }
+    }
+    
+    else{
+        $returnString = $returnString. "No user registered!";
+    }
+    return $returnString;
+    
+}
 function removeUser(){
     session_unset();
 }

@@ -34,9 +34,12 @@ function handle_return2(){
 function handle_return_get_payment(){
     if((ajax.readyState == 4)&&(ajax.status == 200)){
         var payment = JSON.parse(ajax.responseText);
-        $("#payment").html("");
-        for(i = 0; i<payment.length; i++){
+        $("#payment").html("Payment details provided");
+        
+        /*for(i = 0; i<payment.length; i++){
              $("#payment").append(payment[i]+",");
-        }
+        }*/
+        //Print bookings also
+        getBooking();
     }
 }
