@@ -33,6 +33,7 @@
          ?>
      <div class="jumbotron">
         <h1>Welcome to JK travels!</h1>
+        <p>This website was created as an assignemet for the subject Programming on the Internet at the University of Technology, Sydney for autumn semester 2016.</p>
         <p>To start searching hit the button below!</p>
          <a href = "<?php echo $baseDir; ?>/search"><button class = "btn btn-primary">Start searching</button></a>
       </div>

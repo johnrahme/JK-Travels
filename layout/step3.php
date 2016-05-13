@@ -21,10 +21,10 @@
         <div class="panel panel-default">
             <div class="panel-body" style="padding-top: 0">
                 <div class="page-header" style="margin-top:7px; margin-bottom: 7px">
-                <h4 class="text-center">Contact information</h4>
+                <h4 class="text-center">Booking details</h4>
                 </div>
                 <div id = "details">Loading contact information...</div>
-                <div id = "payment">Loading payment...</div>
+                <div id = "payment" style = "color:red; ">Loading payment...</div>
             </div>
         </div>
     </div>
@@ -33,4 +33,4 @@
 <button class = "btn btn-primary" id = "toStep2nr2" onclick="show('step2nr2')">Stage 2 - Payment details</button>
 
 
-<a href = "<?php echo $rootPath; ?>PHP/mail.php"><button class = "btn btn-primary" id = "toStep4" onclick="show('step4')">Stage 4 - Confirmation</button></a>
+<a href = "<?php echo $rootPath; ?>PHP/mail.php"><button class = "btn btn-primary" id = "toStep4" onclick="show('step4')">Stage 4 - Confirm Payment</button></a>

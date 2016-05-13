@@ -125,7 +125,7 @@ function validateStep2(){
     if($("#expYear").val()<yyyy){
         expired = true;
     }
-    else if($("#expYear").val()<=yyyy&&$("#expMonth").val()<=mm){
+    else if($("#expYear").val()<=yyyy&&$("#expMonth").val()<=mm-1){
         expired = true;
     }
     if(expired){

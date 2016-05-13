@@ -84,7 +84,7 @@
         <div class = "row" style= "margin: auto; max-width: 300px;">
          <div class = "col-md-12">      
              <div class="form-group">
-                <button id="addBooking" type = "submit" class = "btn btn-lg btn-primary" >
+                <button id="addBooking" type = "submit" class = "btn btn-lg btn-primary" onclick = "return bookingSelected()" >
                 Add to bookings 
                 <span class="glyphicon glyphicon-menu-right" aria-hidden="true">
                 </button>
@@ -132,7 +132,7 @@
         }
         else{
          trObjects[i].find( "input" ).slice(1).attr("disabled","disabled");
-            $("#addBooking").attr("disabled","disabled");
+            //$("#addBooking").attr("disabled","disabled");
         }
         
              
@@ -143,7 +143,7 @@
         value.find("input").first().change(function() {
         if(this.checked) {
          value.find( "input" ).slice(1).removeAttr("disabled"); 
-         $("#addBooking").removeAttr("disabled");
+         //$("#addBooking").removeAttr("disabled");
         nrOfSeats++;
          $("#dispSeats").html("Number of seats: "+nrOfSeats);
         }
@@ -151,7 +151,7 @@
         nrOfSeats--;
          value.find( "input" ).slice(1).attr("disabled","disabled");
         if(!isAnySeatSelected()){
-                $("#addBooking").attr("disabled","disabled");
+                //$("#addBooking").attr("disabled","disabled");
          }     
         $("#dispSeats").html("Number of seats: "+nrOfSeats);
             
@@ -159,7 +159,15 @@
     })
     });
     
-    
+    function bookingSelected(){
+        if(isAnySeatSelected()){
+            
+            return true;
+            
+        }
+        alert("Please select a seat to continue booking!");
+        return false;
+    }
     
         
    

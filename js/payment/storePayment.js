@@ -34,7 +34,7 @@ function handle_return2(){
 function handle_return_get_payment(){
     if((ajax.readyState == 4)&&(ajax.status == 200)){
         var payment = JSON.parse(ajax.responseText);
-        $("#payment").html("Payment details provided");
+        $("#payment").html("Credit card details supplied!");
         
         /*for(i = 0; i<payment.length; i++){
              $("#payment").append(payment[i]+",");

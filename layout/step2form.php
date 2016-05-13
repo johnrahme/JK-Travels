@@ -76,7 +76,7 @@
         <div class="panel panel-default">
             <div class="panel-body" style="padding-top: 0">
                 <div class="page-header" style="margin-top:7px; margin-bottom: 7px">
-                <h4 class="text-center">Contact information </h4>
+                <h4 class="text-center">Booking details</h4>
                 </div>
                 <div id = "firstNameP">Loading contact information...</div>
             </div>

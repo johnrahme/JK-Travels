@@ -46,7 +46,7 @@
               </div>
             </div>
               <div class="form-group">
-                <input id="submitSearch" type = "submit" class = "btn btn-lg btn-primary" value = "Search for flights »" >
+                <input id="submitSearch" onclick="return checkForInput()" type = "submit" class = "btn btn-lg btn-primary" value = "Search for flights »" >
               </div>                                         
           </form>
           <!--END SEARCH FORM-->
@@ -69,7 +69,7 @@
          <div class = "row" style= "margin: auto; max-width: 300px;">
              <div class = "col-md-6">      
                  <div class="form-group">
-                    <button id="submitFlight" type = "submit" class = "btn btn-lg btn-primary disabled" disabled>
+                    <button id="submitFlight" type = "submit" class = "btn btn-lg btn-primary disabled" onClick = "return flightSelected()">
                     Make booking for selected flight
                     <span class="glyphicon glyphicon-menu-right" aria-hidden="true">
                     </button>
@@ -125,6 +125,13 @@
 }(jQuery));
     </script>
     <script>
+        function flightSelected(){
+            if($("#submitFlight").hasClass("disabled")){
+                alert("No flight selected!");
+                return false;
+            }
+            return true;
+        }
         //Check if a radiobutton has been selected
         $("input[name='trip']").change(function(){
             document.getElementById("submitFlight").disabled = false;
@@ -133,6 +140,18 @@
         if($("input[name='trip']").is(':checked')){
             document.getElementById("submitFlight").disabled = false;
             $("#submitFlight").removeClass("disabled");
+        }
+        $("#submitFlight").hover(function(){
+           
+        });
+        
+        //Check if any flight has been searched for
+        function checkForInput(){
+            if($("#searchAutoCompleteFrom").val()==""&&$("#searchAutoCompleteTo").val()==""){
+                alert("No cities selected!")
+                return false;
+            }
+            return true;
         }
         
     </script>

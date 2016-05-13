@@ -35,7 +35,7 @@ function getBookingsString(){
 //Print bookings with delete boxes
 function printBookings(){
     global $baseDir;
-    if(isset($_SESSION["bookings"])){
+    if(isset($_SESSION["bookings"])&&count($_SESSION["bookings"])!=0){
     $sum = 0;
     //Print the table if bookings is set
     print "<table class='table table-striped table-bordered'>";
