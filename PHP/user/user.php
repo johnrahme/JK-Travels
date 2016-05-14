@@ -21,10 +21,46 @@ function printUser(){
 function printUserTable(){
     $returnString = "";
     if(isset($_SESSION["user"])){
+    $returnString .= '<span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$_SESSION["user"][0]." ". $_SESSION["user"][1];
+    //address
+    $state = "";
+    $postcode = "";
+    $address2 = "";
+    if($_SESSION["user"][3]!=""){
+        $address2 = " ".$_SESSION["user"][3];
+    }
+    if($_SESSION["user"][5]!=""){
+        $state = " ".$_SESSION["user"][5]."";
+    }
+    if($_SESSION["user"][6]!=""){
+        $postcode = " ".$_SESSION["user"][6];
+    }
     
+    //Print address
+    $returnString .= '<br><span class="glyphicon glyphicon-home" aria-hidden="true"></span> ';
+    $returnString .= $_SESSION["user"][2].$address2.$state.$postcode.", ".$_SESSION["user"][7];
+        
+    //Print mail
+    $returnString .= '<br><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> ';  
+    $returnString .= $_SESSION["user"][8];
+    
+    //Print phones
+    if($_SESSION["user"][9]!=""){
+        $returnString .= '<br><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> ';
+        $returnString .= $_SESSION["user"][9];
+    }
+    if($_SESSION["user"][10]!=""){
+        $returnString .= '<br><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> ';
+        $returnString .= $_SESSION["user"][10];
+    }
+    if($_SESSION["user"][11]!=""){
+        $returnString .= '<br><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> ';
+        $returnString .= $_SESSION["user"][11];
+    }        
+     /*
      foreach($_SESSION["user"] as $key => $attribute){
          $returnString = $returnString."$attribute <br>";
-     }
+     }*/
     }
     
     else{
